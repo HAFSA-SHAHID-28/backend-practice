@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+</head>
+<body>
+    <%- include('common/header')  %>
+
+    <h1>User Profile</h1>
+<!-- without ejs -->
+    <!-- <img width="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1jWXsYTijwUVsko7IiuJAoTJRcs1Z9Gb2ew&s" alt="">
+
+    <ul>
+        <li>Name: Hafsa</li>
+        <li>Email: hafsa@gmail.com</li>
+        <li>Contact: 0123456789</li>
+        <li>Address: Karachi, Pakistan.</li>
+        <li>Name: Ruhama</li>
+    </ul> -->
+
+
+    <!-- //////     with ejs       /////////// -->
+       <img width="300" src="<%= user.image %>" alt="">
+
+       <!-- <%= %> ----   for variable -->
+
+    <ul>
+        <li>Name: <%= user.name %></li>
+        <li>Email: <%= user.email %></li>
+        <li>Contact: <%= user.contact %></li>
+        <li>Address: <%= user.address %></li>
+   
+
+        <!-- <% %> ----   for js/expression/if/loop etc -->
+
+<!-- conditional rendering  -->
+
+<% if ( user.experience > 2) { %>
+   <li>Senior</li>
+<% } else {  %>
+    <li>Junior</li>
+<%  } %>
+</ul>
+
+
+
+<!-- array print -->
+
+
+<h3>Skills</h3>
+
+<ul>
+    <% user.skills.forEach(skill => {%>
+<li><%= skill %></li>
+ <% });%>
+</ul>
+
+<h3></h3>
+
+</body>
+</html>
