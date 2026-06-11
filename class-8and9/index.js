@@ -15,16 +15,18 @@ app.get('/', (req, res)=>{
 //////////////////  rest api
 
 
-app.get('/api/users/:id', (req, res)=>{
-    const id = req.params.id;
-    const user = data.find((user)=> user.id === Number(id));
-    res.json(user);
-})
+// app.get('/api/users/:id', (req, res)=>{
+//     const id = req.params.id;
+//     const user = data.find((user)=> user.id === Number(id));
+//     res.json(user);
+// })
 
 app.get('/api/users/', (req, res)=>{
     res.json(data);
 })
 
+
+/////////////// to add data
 
 app.post('/api/users', (req, res)=>{
     data.push({...req.body, id: data.length+1});
@@ -33,9 +35,29 @@ app.post('/api/users', (req, res)=>{
            res.json({message: 'User created successfully!'})       
     });
     console.log(data);
-    
+
     // res.send(req.body);
 });
 
+app.post('/api/peoples', (req, res)=>{
+    data.push({...req.body, id: data.length + 1});
+    fs.writeFile('data.json', JSON.stringify(data), (err, data)=>{
+        if(err) console.log(err);
+        res.json({message: 'user is made by me!'})
+        
+    });
+});
+
+
+
+//////////////// update
+
+app.patch('/api/users/:id', (req, res)=>{
+    const id = req.params.id; 
+    let user = data.find((user)=> user.id === Number(id));
+    res.json(user);
+})
+
 app.listen(8000, ()=> console.log('Server is Running at port 8000')
 )
+
