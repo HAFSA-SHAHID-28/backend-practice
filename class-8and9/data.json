@@ -7984,14 +7984,6 @@
     "ip_address": "79.185.90.136"
   },
   {
-    "id": 999,
-    "first_name": "Carver",
-    "last_name": "Reihm",
-    "email": "creihmrq@upenn.edu",
-    "gender": "Male",
-    "ip_address": "52.79.152.5"
-  },
-  {
     "id": 1000,
     "first_name": "Isiahi",
     "last_name": "Nagle",
@@ -8000,33 +7992,10 @@
     "ip_address": "4.62.112.238"
   },
   {
-    "first_name": "Hafsa",
-    "last_name": "Shahid",
-    "email": "hafsa@gmail.com",
-    "gender": "female",
-    "language": "urdu",
-    "id": 1001
-  },
-  {
-    "first_name": "Ahmed",
-    "last_name": "Raza",
-    "email": "raza@gmail.com",
-    "gender": "male",
-    "language": "pashtu",
-    "id": 1002
-  },
-  {
     "first_name": "Almas",
     "email": "almas@gmail.com",
     "gender": "female",
     "language": "urdu",
     "id": 1003
-  },
-  {
-    "first_name": "fiza",
-    "email": "fiza@gmail.com",
-    "gender": "female",
-    "language": "urdu",
-    "id": 1004
   }
 ]

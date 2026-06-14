@@ -1,0 +1,9 @@
+[
+  {
+    "id": 2,
+    "title": "Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "price": 1500
+  },
+  { "id": 3, "title": "Peer-e-Kamil", "author": "Umera Ahmed", "price": 800 }
+]
