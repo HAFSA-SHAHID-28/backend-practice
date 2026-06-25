@@ -1,8 +1,10 @@
+// require('dotenv').config();
+
 // const {MongoClient} = require("mongodb");
 
 
 // //////// meri string connect ke bad witout srv wali string leni h
-// const url = 'mongodb://hafsashahid282007_db_user:tulip2827@ac-rhlifbp-shard-00-00.tbisrad.mongodb.net:27017,ac-rhlifbp-shard-00-01.tbisrad.mongodb.net:27017,ac-rhlifbp-shard-00-02.tbisrad.mongodb.net:27017/?ssl=true&replicaSet=atlas-ypn0pm-shard-0&authSource=admin&appName=Cluster0';
+// const uri = process.env.MONGO_URI;
 
 
 // const client =  new MongoClient(url);
