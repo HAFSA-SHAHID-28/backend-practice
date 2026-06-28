@@ -12,7 +12,7 @@ const client =  new MongoClient(uri);
 const connectDb = async () => {
     
         await client.connect();
-        console.log("Database connected successfully! 🎉");
+        console.log("Database connected successfully!");
     const database = client.db('e-com');
 
     return database;

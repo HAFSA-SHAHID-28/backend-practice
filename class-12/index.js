@@ -113,5 +113,29 @@ app.get('/api/products', async (req, res) =>{
 });
 
 
+//////////////////// Update Product
+
+app.patch('/api/products/:title', async (req, res) => {
+    const productRef = (await db()).collection('products');
+    const result = await productRef.updateOne(
+        {title: req.params.title},
+        {$set: req.body}
+    );
+
+    res.json({message: "product updated", result});
+});
+
+
+///////////////////  delete product
+
+app.delete('/api/products/:id', async (req, res) => {
+    const productRef = (await db()).collection('products');
+    const result = await productRef.deleteOne(
+        {_id: new ObjectId(req.params.id)}
+    );
+
+    res.json({message: "Product Deleted", result})
+});
+
 
 app.listen(8000, () => console.log('Server is Running at 8000'));
